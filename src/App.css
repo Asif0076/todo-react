@@ -20,3 +20,24 @@ input {
 .addName:hover {
   opacity: 0.6;
 }
+
+.btnLeftM {
+  margin-left: 10px;
+}
+
+.row {
+  padding: 15px 0px 15px 0px;
+  display: flex;
+  justify-content: space-between;
+  background-color: aqua;
+}
+
+.nameList {
+  position: relative; 
+  left: 33px;
+  width: 500px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
