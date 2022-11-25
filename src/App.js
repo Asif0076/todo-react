@@ -7,7 +7,7 @@ function App() {
   const [currentName, setCurrentName] = useState("");
   const [nameToList, setNameToList] = useState([])
   const [editIndex, setEditIndex] = useState("");
-  const [editStatus, setEditStatus] = useState("add");
+  // const [editStatus, setEditStatus] = useState("add");
 
 
   // OnChange for currentInput
@@ -22,7 +22,7 @@ const addNametoList = () => {
 console.log("add some Function...")
   if(currentName === "") return null 
 
-  if(editStatus === "edit") {
+  if(editIndex) {
     let temp = [...nameToList]
     temp.splice(editIndex, 1, currentName)
     console.log("temp", temp);
@@ -33,7 +33,7 @@ console.log("add some Function...")
   }
   setCurrentName("");
   setEditIndex("");
-  setEditStatus("add");
+  // setEditStatus("add");
 }
 
 // for edit button 
@@ -41,7 +41,7 @@ const editCurrentName = (userName, index) => {
 console.log(userName);
 setCurrentName(userName);
 setEditIndex(index)
-setEditStatus("edit")
+// setEditStatus("edit")
 }
 
 
@@ -56,11 +56,11 @@ console.log("NameList", nameToList);
 
   return (
     <div className="App">
-      <h1>Todo App</h1>
+      <h1>Todo App for UserName</h1>
 
-    <input placeholder='Name' value={currentName} onChange= {handleChange} />
+    <input className='inputUser' placeholder='Enter UserName' value={currentName} onChange= {handleChange} />
 <br/> <br/>
-    <button className='addName' onClick={addNametoList}>ADD NAME</button>
+    <button className='addName' onClick={addNametoList}>ADD (<i>UserName</i>)</button>
 
 <br /><br />
 
@@ -70,23 +70,25 @@ console.log("NameList", nameToList);
 <div className='nameList'>
 <div>
 <h2><u>Name List</u></h2>
+
 {
   nameToList?.length && nameToList.map((userName, i) => {
     return (
        <div className='row'>
-      <span>{i + 1 + " " + userName}</span>
-      <button className='btnLeftM' onClick={() => editCurrentName(userName, i)}>Edit</button> 
-      <button className='btnLeftM' onClick={() => deleteName(i)}>Delete</button> 
-      
+      <span>{i + 1 + " . " + (userName.length > 5 ? userName.substr(0,30) : userName)}</span>
+          <div className='adddeletebtn'>
+            <button className='btnLeftM1' id='btn1'  onClick={() => editCurrentName(userName, i)}>Edit</button> 
+            <button className='btnLeftM2' id='btn2' onClick={() => deleteName(i)}>Delete</button> 
+          </div>
       </div>
-      
+    
     ) 
   })
 }
 </div>
 </div>
 
-
+<div className='footer'>Asif Nawaz - 31173 - Assignment - 5 </div>
     </div>
   );
 }
