@@ -44,7 +44,6 @@ setEditIndex(index)
 // setEditStatus("edit")
 }
 
-
 // for delete 
 const deleteName= (index) => {
   let temp = [...nameToList]
