@@ -10,11 +10,24 @@ body{
 
 h1 {
   background-color: rgba(13, 12, 19, 0.705);
-  width: 500px;
-  margin-left: 390px;
+  border: 1px solid white;
+  width: 490px;
+  margin-left: 400px;
   color: white;
   padding: 25px 25px 25px 25px;
-  border-radius: 85px 0px;
+  border-radius: 60px 60px 20px 20px;
+}
+
+.userAndAdd {
+  width: 543px;
+  height: 150px;
+  margin-left: 400px;
+  background-color: rgba(13, 12, 19, 0.705);
+  border-radius: 25px;
+  border: 1px solid white;
+
+
+  
 }
 
 input {
@@ -25,8 +38,10 @@ input {
 font-size: 25px;
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0.74);
+  border: 1px solid black;
+
   color: black;
-  border: 2px solid blue;
+  margin-top: 20px;
 }
 
 input::placeholder {
@@ -36,16 +51,18 @@ input::placeholder {
 
 
 .addName {
-  width: 150px;
+  width: 200px;
   padding: 10px;
-  background-color: aqua;
-  color: black;
-  border: none;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+ 
   border-radius: 40px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 18px;
   transition: transform 0.5 s;
+  letter-spacing: 1px;
 
 }
 
@@ -54,15 +71,19 @@ input::placeholder {
 .addName:hover {
   opacity: 0.6;
   transform: scale(1.2);
+  border: 1px solid white;
+
 }
 
 .nameList {
   position: relative; 
   width: 500px;
   margin-left: 400px;
-  border: 2px solid blue;
+  margin-top: 10px;
   padding: 20px;
-  background-image: url(/src/images/markhor.jpg);
+  background-color: rgba(13, 12, 19, 0.705);
+  border: 1px solid white;
+
   background-repeat: no-repeat;
   margin-bottom: 20px;
   border-radius: 0px 0px 45px 45px;
@@ -75,6 +96,7 @@ input::placeholder {
 
 h2 {
   background-color: rgba(10, 14, 14, 0.87);
+  border: 1px solid white;
   width: 180px;
   margin-left: 170px;
   border-radius: 45px;
@@ -117,7 +139,8 @@ h2 {
   padding: 10px 0px 10px 0px;
   display: flex;
   justify-content: space-between;
-  background-color: rgba(13, 12, 19, 0.705);
+  background-color: rgb(13, 12, 19);
+  border: 1px solid white;
   margin-top: 10px;
   border-radius: 10px;
   color: white;
@@ -142,6 +165,7 @@ span {
   margin-left: 402px;
   height: 25px;
   background-color: rgba(24, 22, 22, 0.767);
+  border: 1px solid white;
   border-radius: 25px 25px 0 0 ;
   color: white;
   transition: transform 0.5 s;
@@ -152,6 +176,5 @@ span {
   transform: scale(1.8);
   font-weight: bold;
   background-color: rgba(24, 22, 22, 0.979);
-
- 
+  border: 1px solid white; 
 }

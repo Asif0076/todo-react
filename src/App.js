@@ -57,15 +57,10 @@ console.log("NameList", nameToList);
   return (
     <div className="App">
       <h1>Todo App for UserName</h1>
-
-    <input className='inputUser' placeholder='Enter UserName' value={currentName} onChange= {handleChange} />
-<br/> <br/>
+    <div className='userAndAdd'>
+    <input className='inputUser' placeholder='Enter UserName' value={currentName} onChange= {handleChange} /><br/><br/>
     <button className='addName' onClick={addNametoList}>ADD (<i>UserName</i>)</button>
-
-<br /><br />
-
-
-
+    </div>
 
 <div className='nameList'>
 <div>
@@ -92,5 +87,5 @@ console.log("NameList", nameToList);
     </div>
   );
 }
-
+ 
 export default App;
