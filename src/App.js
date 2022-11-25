@@ -25,11 +25,11 @@ console.log("add some Function...")
   if(editIndex) {
     let temp = [...nameToList]
     temp.splice(editIndex, 1, currentName)
-    console.log("temp", temp);
+    console.log("temp", temp)
     setNameToList([...temp])
   }else {
-    console.log("add...");
-    setNameToList([...nameToList, currentName]);
+    console.log("add...")
+    setNameToList([...nameToList, currentName])
   }
   setCurrentName("");
   setEditIndex("");
@@ -40,7 +40,7 @@ console.log("add some Function...")
 const editCurrentName = (userName, index) => {
 console.log(userName);
 setCurrentName(userName);
-setEditIndex(index)
+setEditIndex(userName)
 // setEditStatus("edit")
 }
 
@@ -51,7 +51,9 @@ const deleteName= (index) => {
   setNameToList(temp)
 }
 
-console.log("NameList", nameToList);
+console.log("Current Name: ", currentName )
+console.log("Name List: ", nameToList);
+console.log("Edit Index: " , editIndex);
 
   return (
     <div className="App">
